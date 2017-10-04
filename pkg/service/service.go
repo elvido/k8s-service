@@ -44,7 +44,9 @@ func Setup(cfg *config.Config) (r router.BitRoute, log logger.Logger, err error)
 	r.GET("/healthz", h.Health)
 	r.GET("/readyz", h.Ready)
 	r.GET("/info", h.Info)
+	r.GET("/events", h.Events)
 
+	handlers.LoadEvents(cfg, log)
 	return
 }
 

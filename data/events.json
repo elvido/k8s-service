@@ -1,0 +1,39 @@
+{
+  "@metadata": {
+    "authors": [
+      "r.hofmann@sap.com"
+    ],
+    "last-modified": "2017-10-01",
+    "version": "0.1.0"
+  },
+  "events": [
+    {
+        "id": 1,
+        "name": "cart.saved",
+        "source": "ec-prod",
+        "description": "This event gets fired whenever an cart gets saved.",
+        "payload": "oder id"
+    },
+    {
+        "id": 2,
+        "name": "order.created",
+        "source": "ec-prod",
+        "description": "This event gets fired whenever an new order gets created.",
+        "payload": "order id"
+    },
+    {
+        "id": 3,
+        "name": "order.updated",
+        "source": "ec-prod",
+        "description": "This event gets fired whenever an order gets modified.",
+        "payload": "order id"
+    },
+    {
+        "id": 4,
+        "name": "order.deleted",
+        "source": "ec-prod",
+        "description": "This event gets fired whenever an order gets deleted.",
+        "payload": ""
+    }
+  ]
+}

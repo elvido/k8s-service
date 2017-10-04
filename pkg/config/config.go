@@ -5,13 +5,13 @@
 package config
 
 import (
-	"github.com/kelseyhightower/envconfig"
 	"github.com/elvido/k8s-service/pkg/logger"
+	"github.com/kelseyhightower/envconfig"
 )
 
 const (
 	// SERVICENAME contains a service name prefix which used in ENV variables
-	SERVICENAME = "k8s-service"
+	SERVICENAME = "K8S_SERVICE"
 )
 
 // Config contains ENV variables
@@ -22,6 +22,8 @@ type Config struct {
 	LocalPort int `split_words:"true"`
 	// Logging level in logger.Level notation
 	LogLevel logger.Level `split_words:"true"`
+	//	Events data file
+	EventsDefinition string `split_words:"true"`
 }
 
 // Load settles ENV variables into Config structure
