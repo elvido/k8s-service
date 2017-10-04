@@ -1,9 +1,9 @@
 # Kubernetes application
 
-[![Build Status](https://travis-ci.org/elvido/k8s_service.svg?branch=master)](https://travis-ci.org/elvido/k8s_service)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/elvido/k8s_service/issues)
-[![Go Report Card](https://goreportcard.com/badge/github.com/elvido/k8s_service)](https://goreportcard.com/report/github.com/elvido/k8s_service)
-[![codecov](https://codecov.io/gh/elvido/k8s_service/branch/master/graph/badge.svg)](https://codecov.io/gh/elvido/k8s_service)
+[![Build Status](https://travis-ci.org/elvido/k8s-service.svg?branch=master)](https://travis-ci.org/elvido/k8s-service)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/elvido/k8s-service/issues)
+[![Go Report Card](https://goreportcard.com/badge/github.com/elvido/k8s-service)](https://goreportcard.com/report/github.com/elvido/k8s-service)
+[![codecov](https://codecov.io/gh/elvido/k8s-service/branch/master/graph/badge.svg)](https://codecov.io/gh/elvido/k8s-service)
 
 A sample application that meets the requirements for successful execution in Kubernetes.
 
@@ -135,4 +135,4 @@ participate in the Kubernetes application project by submitting pull requests or
 
 ## License
 
-[MIT Public License](https://github.com/elvido/k8s_service/blob/master/LICENSE)
+[MIT Public License](https://github.com/elvido/k8s-service/blob/master/LICENSE)

@@ -6,12 +6,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/logger"
-	"github.com/elvido/k8s_service/pkg/logger/standard"
-	"github.com/elvido/k8s_service/pkg/router"
-	"github.com/elvido/k8s_service/pkg/router/bitroute"
-	"github.com/elvido/k8s_service/pkg/version"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/logger/standard"
+	"github.com/elvido/k8s-service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router/bitroute"
+	"github.com/elvido/k8s-service/pkg/version"
 )
 
 func TestRoot(t *testing.T) {

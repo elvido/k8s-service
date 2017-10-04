@@ -8,8 +8,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/logger"
 )
 
 // UTC contains default UTC suffix

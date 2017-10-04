@@ -3,8 +3,8 @@
 # license that can be found in the LICENSE file.
 
 APP=k8s-service
-PROJECT=github.com/elvido/k8s_service
-REGISTRY?=docker.io/takama
+PROJECT=github.com/elvido/k8s-service
+REGISTRY?=docker.io/elvido
 CA_DIR?=certs
 
 # Use the 0.0.0 tag for testing, it shouldn't clobber any release builds
@@ -17,10 +17,10 @@ K8S_SERVICE_LOCAL_PORT?=8080
 K8S_SERVICE_LOG_LEVEL?=0
 
 # Namespace: dev, prod, release, cte, username ...
-NAMESPACE?=cte
+NAMESPACE?=dev
 
 # Infrastructure: dev, stable, test ...
-INFRASTRUCTURE?=stable
+INFRASTRUCTURE?=dev
 VALUES?=values-${INFRASTRUCTURE}
 
 CONTAINER_IMAGE?=${REGISTRY}/${APP}

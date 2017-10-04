@@ -7,7 +7,7 @@ package bitroute
 import (
 	"sort"
 
-	"github.com/elvido/k8s_service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router"
 )
 
 const (

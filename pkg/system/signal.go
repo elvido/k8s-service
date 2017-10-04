@@ -11,7 +11,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/elvido/k8s_service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/logger"
 )
 
 // SignalType describe

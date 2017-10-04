@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/elvido/k8s_service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/logger"
 )
 
 func TestNewXLog(t *testing.T) {

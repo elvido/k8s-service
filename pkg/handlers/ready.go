@@ -7,7 +7,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/elvido/k8s_service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router"
 )
 
 // Ready returns "OK" if service is ready to serve traffic

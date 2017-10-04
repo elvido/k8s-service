@@ -7,7 +7,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/elvido/k8s_service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router"
 )
 
 // Health returns "OK" if service is alive

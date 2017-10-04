@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/elvido/k8s_service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router"
 )
 
 func getRouterForTesting() *bitroute {

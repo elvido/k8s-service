@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/service"
-	"github.com/elvido/k8s_service/pkg/system"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/service"
+	"github.com/elvido/k8s-service/pkg/system"
 )
 
 func main() {

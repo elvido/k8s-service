@@ -6,12 +6,12 @@ package config
 
 import (
 	"github.com/kelseyhightower/envconfig"
-	"github.com/elvido/k8s_service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/logger"
 )
 
 const (
 	// SERVICENAME contains a service name prefix which used in ENV variables
-	SERVICENAME = "K8S_SERVICE"
+	SERVICENAME = "k8s-service"
 )
 
 // Config contains ENV variables

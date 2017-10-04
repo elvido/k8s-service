@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/logger"
-	"github.com/elvido/k8s_service/pkg/router"
-	"github.com/elvido/k8s_service/pkg/version"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/version"
 )
 
 // Handler defines common part for all handlers

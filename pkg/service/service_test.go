@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/handlers"
-	"github.com/elvido/k8s_service/pkg/router/bitroute"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/handlers"
+	"github.com/elvido/k8s-service/pkg/router/bitroute"
 )
 
 func TestSetup(t *testing.T) {

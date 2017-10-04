@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/elvido/k8s_service/pkg/config"
-	"github.com/elvido/k8s_service/pkg/logger"
+	"github.com/elvido/k8s-service/pkg/config"
+	"github.com/elvido/k8s-service/pkg/logger"
 )
 
 func TestNewLog(t *testing.T) {

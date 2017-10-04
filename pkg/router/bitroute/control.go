@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/elvido/k8s_service/pkg/router"
+	"github.com/elvido/k8s-service/pkg/router"
 )
 
 type control struct {
