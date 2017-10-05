@@ -8,13 +8,14 @@ REGISTRY?=docker.io/elvido
 CA_DIR?=certs
 
 # Use the 0.0.0 tag for testing, it shouldn't clobber any release builds
-RELEASE?=0.4.5
+RELEASE?=0.0.3
 GOOS?=linux
 GOARCH?=amd64
 
 K8S_SERVICE_LOCAL_HOST?=0.0.0.0
 K8S_SERVICE_LOCAL_PORT?=8080
 K8S_SERVICE_LOG_LEVEL?=0
+K8S_SERVICE_EVENTS_DEFINITION?="/events.json"
 
 # Namespace: dev, prod, release, cte, username ...
 NAMESPACE?=dev
@@ -72,6 +73,7 @@ run: build
 		-e "K8S_SERVICE_LOCAL_HOST=${K8S_SERVICE_LOCAL_HOST}" \
 		-e "K8S_SERVICE_LOCAL_PORT=${K8S_SERVICE_LOCAL_PORT}" \
 		-e "K8S_SERVICE_LOG_LEVEL=${K8S_SERVICE_LOG_LEVEL}" \
+		-e "K8S_SERVICE_EVENTS_DEFINITION=${K8S_SERVICE_EVENTS_DEFINITION}" \
 		-d $(CONTAINER_IMAGE):$(RELEASE)
 	@sleep 1
 	@docker logs ${CONTAINER_NAME}

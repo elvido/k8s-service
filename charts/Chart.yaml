@@ -1,6 +1,6 @@
 name: k8s-service
 description: A Helm charts for Kubernetes application
-version: 0.4.5
+version: 0.0.3
 home: https://my.domain/
 sources:
   - https://github.com/elvido/k8s-service

@@ -34,9 +34,9 @@ workflow: dev
 image:
   ## Docker Registry/Hub image name and tag
   ##
-  registry: docker.io/takama
+  registry: docker.io/elvido
   name: k8s-service
-  tag: 0.4.5
+  tag: 0.0.3
 
   ## Docker Registry/Hub auth secret name, always use `registry-pull-secret` if registry inside if k8s
   ##
