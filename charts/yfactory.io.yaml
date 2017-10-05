@@ -4,11 +4,11 @@
 
 ## Count of instances
 ##
-replicaCount: 2
+replicaCount: 3
 
 ## Count of revisions saved in release history
 ##
-revisionHistoryLimit: 1
+revisionHistoryLimit: 5
 
 ## Time of accepting requests to the service ( seconds )
 ##
@@ -16,7 +16,7 @@ minReadySeconds: 10
 
 ## Value which provide max unavailable state ( percents )
 ##
-maxUnavailable: 50%
+maxUnavailable: 25%
 
 ## Max count of surge replicas
 ##
@@ -29,7 +29,7 @@ gracePeriod: 30
 
 ## Base namespace for working services
 ##
-workflow: dev
+workflow: prod
 
 image:
   ## Docker Registry/Hub image name and tag
@@ -46,63 +46,15 @@ image:
   ##
   pullPolicy: IfNotPresent
 
-ingress:
-  ## If true, Ingress will be created
-  ##
-  enabled: true
-
-  ## Prefix for API (Example: /api/v1/)
-  ##
-  prefix: /
-
-  ## Ingress annotations (e.g. `Let's encrypt` annotations to generating certs)
-  ##
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    kubernetes.io/tls-acme: 'true'
-
-  ## Ingress host feature allow access to service through host 
-  ## example: https://hostname
-  ## Must be provided if Ingress is enabled
-  ##
-  hostBased:
-    hosts:
-    - k8s-service-dev.my.domain
-
-    ## Ingress TLS configuration
-    ## Secrets must be manually created in the namespace
-    ##
-    tls:
-    - secretName: k8s-service-secret
-      hosts:
-      - k8s-service-dev.my.domain
-
-  ## Ingress path feature allow access to service through path 
-  ## example: https://hostname/namespace/servicename
-  ## Must be provided if Ingress is enabled
-  ##
-  pathBased:
-    hosts:
-    - services-dev.my.domain
-
-    ## Ingress TLS configuration
-    ## Secrets must be manually created in the namespace
-    ## except of case when annotatoon `kubernetes.io/tls-acme: 'true'` is present
-    ##
-    tls:
-    - secretName: services-secret
-      hosts:
-      - services-dev.my.domain
-
 service:
   ## App container name
   ##
-  name: k8s-service
+  name: yfevents
   
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP
   ##
-  type: NodePort
+  type: ClusterIP
 
   ## App service port
   ##
@@ -122,3 +74,8 @@ resources:
   requests:
     cpu: 30m
     memory: 48Mi
+
+ingress:
+  ## If true, Ingress will be created
+  ##
+  enabled: false
