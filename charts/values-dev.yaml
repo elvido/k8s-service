@@ -102,7 +102,7 @@ service:
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP
   ##
-  type: ClusterIP
+  type: NodePort
 
   ## App service port
   ##
