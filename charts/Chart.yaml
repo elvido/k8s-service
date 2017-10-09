@@ -1,6 +1,6 @@
 name: yfevents
 description: A Helm charts for Kubernetes application
-version: 0.0.3
+version: 0.0.5
 home: http://yfactory.io
 sources:
   - https://github.com/elvido/k8s-service

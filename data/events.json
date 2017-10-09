@@ -3,37 +3,58 @@
     "authors": [
       "r.hofmann@sap.com"
     ],
-    "last-modified": "2017-10-01",
-    "version": "0.1.0"
+    "last-modified": "2017-10-09",
+    "version": "0.1.2"
   },
   "events": [
     {
-        "id": 1,
-        "name": "cart.saved",
-        "source": "ec-prod",
-        "description": "This event gets fired whenever an cart gets saved.",
-        "payload": "oder id"
+      "id": 1,
+      "name": "cart-saved",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever an cart gets saved.",
+      "payload": "order id"
     },
     {
-        "id": 2,
-        "name": "order.created",
-        "source": "ec-prod",
-        "description": "This event gets fired whenever an new order gets created.",
-        "payload": "order id"
+      "id": 2,
+      "name": "order-created",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever an new order gets created.",
+      "payload": "order id"
     },
     {
-        "id": 3,
-        "name": "order.updated",
-        "source": "ec-prod",
-        "description": "This event gets fired whenever an order gets modified.",
-        "payload": "order id"
+      "id": 3,
+      "name": "order-updated",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever an order gets modified.",
+      "payload": "order id"
     },
     {
-        "id": 4,
-        "name": "order.deleted",
-        "source": "ec-prod",
-        "description": "This event gets fired whenever an order gets deleted.",
-        "payload": ""
+      "id": 4,
+      "name": "order-deleted",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever an order gets deleted.",
+      "payload": "order id"
+    },
+    {
+      "id": 5,
+      "name": "product-created",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever a new product gets created.",
+      "payload": "product id"
+    },
+    {
+      "id": 6,
+      "name": "product-changed",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever a product gets modified.",
+      "payload": "product id"
+    },
+    {
+      "id": 7,
+      "name": "product-deleted",
+      "source": "ec-prod",
+      "description": "This event gets fired whenever a product gets deleted.",
+      "payload": "product id"
     }
   ]
 }
