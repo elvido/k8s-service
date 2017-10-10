@@ -1,0 +1,134 @@
+---
+Events: "0.1"
+
+info:
+  version: 1.0.0
+  title: Simple Events Definition for yFactory Demo
+  description: A simple events definition to verify the concept
+  contact:
+    name: Ralf Hofmann
+    url: https://gateway.yfactory.io/apis/yfactory.sap.com/v1/events
+    email: r.hofmann@sap.com
+
+events:
+  cart-saved:
+    name: cart-saved
+    version: 1.0
+    summary: Notification for saved carts
+    description: This event gets fired whenever an cart gets saved
+    payload:  
+      schema: 
+        required:
+          - cartId
+          - userId
+        properties:
+          cartId:
+            type: string
+            pattern: "[0-9]{8,8}"
+            minLength: 8
+            maxLength: 8
+            example: 23248712
+          siteId:
+            type: string
+            example: us-store
+          userId:
+            type: string
+            minLength: 8
+            maxLength: 128
+            example: john-doe
+      example:
+        cartId: 00019674
+        siteId: apparel-uk
+        userId: gophertestmail@gmail.com
+  order-created:
+    name: order-created
+    version: 1.0
+    summary: Notification in case an order got created
+    description: This event gets fired whenever an new order gets created.
+    payload:  
+      schema: 
+        required:
+          - orderId
+        properties:
+          orderId:
+            type: string
+            pattern: "[0-9]{8,8}"
+            minLength: 8
+            maxLength: 8
+  order-updated:
+    name: order-updated
+    version: 1.0
+    summary: Notification in case an order got updated
+    description: This event gets fired whenever an order gets modified.
+    payload:  
+      schema: 
+        required:
+          - orderId
+        properties:
+          orderId:
+            type: string
+            pattern: "[0-9]{8,8}"
+            minLength: 8
+            maxLength: 8
+  order-deletesd:
+    name: order-deleted
+    version: 1.0
+    summary: Notification in case an order got deleted
+    description: This event gets fired whenever an order gets deleted.
+    payload:  
+      schema: 
+        required:
+          - orderId
+        properties:
+          orderId:
+            type: string
+            pattern: "[0-9]{8,8}"
+            minLength: 8
+            maxLength: 8
+  product-created:
+    name: product-created
+    version: 1.0
+    summary: Notification in case a product got created
+    description: This event gets fired whenever a new product gets created.
+    payload:  
+      schema: 
+        required:
+          - productId
+        properties:
+          productId:
+            $ref: '#/definitions/ProductId'
+  product_changed:
+    name: product-changed
+    version: 1.0
+    summary: Notification in case a product got modified
+    description: This event gets fired whenever a product gets modified.
+    payload:  
+      schema: 
+        required:
+          - productId
+        properties:
+          productId:
+            $ref: '#/definitions/ProductId'
+  product-deleted:
+    name: product-deleted
+    version: 1.0
+    summary: Notification in case a product got deleted
+    description: This event gets fired whenever a product gets deleted.
+    payload:  
+      schema: 
+        required:
+          - productId
+        properties:
+          productId:
+            $ref: '#/definitions/ProductId'
+
+definitions:
+  productId:
+    title: Product Identifier
+    description: Identifier of a product
+    type: string
+    pattern: "[0-9][a-z][A-Z]_-"
+    minLength: 8
+    maxLength: 128
+    example: a6767-787-898ZE
+
