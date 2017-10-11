@@ -8,6 +8,9 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"path/filepath"
+
+	"github.com/ghodss/yaml"
 
 	"github.com/elvido/k8s-service/pkg/config"
 	"github.com/elvido/k8s-service/pkg/logger"
@@ -36,7 +39,7 @@ type Event struct {
 	Payload     string `json:"payload"`
 }
 
-var eventsDefinition EventsDefinition
+var eventsDefinition interface{}
 
 // LoadEvents load the events from file
 func LoadEvents(cfg *config.Config, log logger.Logger) {
@@ -46,11 +49,16 @@ func LoadEvents(cfg *config.Config, log logger.Logger) {
 		return
 	}
 
-	json.Unmarshal(file, &eventsDefinition)
+	if filepath.Ext(cfg.EventsDefinition) == ".yaml" {
+		y, _ := yaml.YAMLToJSON(file)
+		json.Unmarshal(y, &eventsDefinition)
+	} else {
+		json.Unmarshal(file, &eventsDefinition)
+	}
 }
 
 // Events returns detailed info about the service
 func (h *Handler) Events(c router.Control) {
 	c.Code(http.StatusOK)
-	c.Body(eventsDefinition.Events)
+	c.Body(eventsDefinition)
 }

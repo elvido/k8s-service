@@ -15,7 +15,7 @@ GOARCH?=amd64
 K8S_SERVICE_LOCAL_HOST?=0.0.0.0
 K8S_SERVICE_LOCAL_PORT?=8080
 K8S_SERVICE_LOG_LEVEL?=0
-K8S_SERVICE_EVENTS_DEFINITION?="/events.json"
+K8S_SERVICE_EVENTS_DEFINITION?="/events.yaml"
 
 # Namespace: dev, prod, release, cte, username ...
 NAMESPACE?=dev
